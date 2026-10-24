@@ -4,8 +4,8 @@ Place the original **H2.csv** at `data/raw/H2.csv`. No dataset is downloaded aut
 Expected original source: City Hotel only, 79,330 rows, 31 columns. Verify this against the actual file before training.
 
 - `raw/`: immutable original files, ignored by Git.
-- `interim/`: ignored temporary transformations and split manifests.
-- `processed/`: ignored derived inputs.
+
+Add derived-data folders only when needed; see [future structure](../docs/future-structure.md).
 
 Do not combine H1 and H2. A combined snake_case mirror is not a drop-in replacement:
 isolate City Hotel and document an explicit one-to-one column mapping before using it.

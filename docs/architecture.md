@@ -16,25 +16,24 @@ The final solution must run outside notebooks, compare at least three models per
 | Shared Python package, declarative experiments, thin notebooks | Same code locally and in Colab; auditable comparisons | Small initial setup cost | Recommended bootstrap default |
 | Full orchestration platform with hosted tracking and data remotes | Multi-user operations and dashboards | Accounts, credentials, storage maintenance disproportionate to this project | Revisit only if needed |
 
-## Boundaries
+## Current boundaries
 
-- `src/hotel_ml/data/`: loading, source-schema checks, immutable split manifests.
-- `src/hotel_ml/features/`: feature availability policies and reproducible feature builders.
-- `src/hotel_ml/preprocessing/`: fitted transformations composed inside model pipelines.
-- `src/hotel_ml/tasks/{regression,classification,clustering}/`: task-specific model definitions and searches.
-- `src/hotel_ml/evaluation/`: metrics, comparisons, and final evaluation protocol.
-- `src/hotel_ml/experiments/`: config validation and independent run directories.
-- `src/hotel_ml/inference/`: loading saved pipelines and validating prediction inputs.
-- `apps/`: future UI; the CLI remains usable independently.
-- `notebooks/`: exploration and Colab launchers calling package code.
+- `src/hotel_ml/experiments/`: config validation and independent run records.
+- `src/hotel_ml/cli.py`: environment inspection, recipe validation and run initialization.
+- `notebooks/`: the Colab launcher calling the shared package.
+- `configs/`: versioned task recipes; `data/raw/`: the user-supplied H2 location.
+- `artifacts/`: ignored generated outputs; `tests/` and `scripts/`: development checks.
 
-Only config validation, run initialization, and environment inspection are implemented in the bootstrap. Empty package boundaries reserve the remaining work; they do not claim working model training.
+Unused package, application, derived-data and reporting folders have been removed to keep
+onboarding straightforward. Their responsibilities and creation triggers are recorded in
+[future structure](future-structure.md). Add them alongside real code or outputs.
+Only config validation, run initialization and environment inspection are implemented now.
 
 ## Versions and run identity
 
 An experiment is a scientific recipe under `configs/<task>/<version>/`. A run is one execution of that recipe, with a unique UTC/UUID identifier under `artifacts/<task>/<version>/<run_id>/`. Model family, feature representation, baseline/tuned stage, seed, and split identifier are separate config fields. A future v2 need not duplicate v1 source code. Retain old recipes and identify the source commit in every run.
 
-Run initialization captures the resolved configuration, code SHA and dirty state, installed package versions, runtime/platform, and dataset SHA-256 when supplied. Its status is `initialized`, never `trained`. Successful training will add pipeline artifacts, metrics, timings, search results, and a completed status in later phases. `reports/` contains curated publishable results; `artifacts/` contains ignored generated outputs.
+Run initialization captures the resolved configuration, code SHA and dirty state, installed package versions, runtime/platform, and dataset SHA-256 when supplied. Its status is `initialized`, never `trained`. Successful training will add pipeline artifacts, metrics, timings, search results, and a completed status in later phases. Create `reports/` when reviewed publishable results exist; `artifacts/` contains ignored generated outputs.
 
 ## Environment
 

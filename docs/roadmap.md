@@ -1,6 +1,7 @@
 # Delivery phases
 
 Working dates are proposals; bold dates are from the supplied course PDF.
+Create new folders only as their phase needs them; [future structure](future-structure.md) records the deferred layout.
 
 | Phase | Proposed dates | Deliverable / exit condition |
 | --- | --- | --- |

@@ -73,28 +73,25 @@ run outputs to Drive. See [Colab instructions](docs/colab.md).
 
 ## Structure
 
+Only folders used by the current setup are present:
+
 ```text
-configs/<task>/<version>/   # Reusable experiment recipes
-data/{raw,interim,processed}/ # User-supplied, ignored data
+configs/<task>/<version>/   # Experiment recipes
+data/raw/                   # Place your H2.csv here
 src/hotel_ml/
-  data/                    # Future loading, schema and split manifests
-  features/                # Future feature policy and engineering
-  preprocessing/           # Future fitted transformations
-  tasks/{regression,classification,clustering}/
-  evaluation/              # Future metrics and comparisons
-  experiments/             # Config validation and run provenance
-  inference/               # Future saved-pipeline predictions
-  cli.py                   # Shared application entry point
-notebooks/                 # Thin Colab launcher; future exploration
-apps/                      # Future presentation UI
-artifacts/                 # Ignored generated outputs
-reports/                   # Reviewed figures, tables and reports
-tests/                     # Dataset-independent checks
-docs/                      # Brief, architecture, audit and roadmap
-.github/                   # CI and review template
-.vscode/                   # Shared editor tasks and debugging
+  experiments/              # Config validation and run provenance
+  cli.py                    # Shared command-line entry point
+notebooks/                  # Colab launcher
+artifacts/                  # Ignored generated run records
+tests/                      # Automated checks
+scripts/                    # Repository validation utility
+docs/                       # Project brief, instructions and roadmap
+.github/                    # CI and review template
+.vscode/                    # Editor tasks and debugging
 ```
 
+Add new folders as their implementation or outputs become necessary; the
+[future structure note](docs/future-structure.md) records their intended roles.
 See [recipe versioning](configs/README.md), [architecture](docs/architecture.md),
 [ML practices](docs/ml-practices.md), [leakage audit](docs/leakage-audit.md)
 and [sources](docs/references.md).
