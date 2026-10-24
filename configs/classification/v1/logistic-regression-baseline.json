@@ -1,0 +1,13 @@
+{
+  "task": "classification",
+  "version": "v1",
+  "model": "logistic_regression",
+  "stage": "baseline",
+  "representation": "original",
+  "seed": 42,
+  "split_id": "pending-data-audit",
+  "prediction_point": "pending-feature-availability-review",
+  "selection_metric": "f1",
+  "parameters": {},
+  "notes": "Bootstrap recipe only; decide feature policy and split before training."
+}

@@ -1,0 +1,56 @@
+# Python and editors
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+.vscode/*.local.json
+.DS_Store
+Thumbs.db
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+token*.json
+
+# User-supplied data and generated outputs
+/data/raw/*
+!/data/raw/.gitkeep
+/data/interim/*
+!/data/interim/.gitkeep
+/data/processed/*
+!/data/processed/.gitkeep
+/artifacts/*
+!/artifacts/README.md
+/mlruns/
+/mlartifacts/
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+*.h5
+*.pt
+*.pth
+
+# Private AI collaboration files: intentionally local, per owner instruction
+AGENTS.md
+AGENTS.override.md
+CLAUDE.md
+GEMINI.md
+.agents/
+.codex/
+.claude/
+/docs/ai/
+/docs/superpowers/
+.ai/

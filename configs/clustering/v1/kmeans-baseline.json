@@ -1,0 +1,13 @@
+{
+  "task": "clustering",
+  "version": "v1",
+  "model": "kmeans",
+  "stage": "baseline",
+  "representation": "original",
+  "seed": 42,
+  "split_id": "pending-cohort-audit",
+  "prediction_point": "pending-feature-availability-review",
+  "selection_metric": "silhouette",
+  "parameters": {},
+  "notes": "Bootstrap recipe only; decide feature policy and split before training."
+}

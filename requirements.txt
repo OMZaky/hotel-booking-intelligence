@@ -1,0 +1,3 @@
+# Compatible dependency ranges are declared in pyproject.toml.
+# A resolved, tested lock is still required before reported experiments.
+-e .[ml,dev,notebooks]

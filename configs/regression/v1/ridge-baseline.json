@@ -1,0 +1,13 @@
+{
+  "task": "regression",
+  "version": "v1",
+  "model": "ridge",
+  "stage": "baseline",
+  "representation": "original",
+  "seed": 42,
+  "split_id": "pending-data-audit",
+  "prediction_point": "pending-feature-availability-review",
+  "selection_metric": "mae",
+  "parameters": {},
+  "notes": "Bootstrap recipe only; decide feature policy and split before training."
+}

@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Hotel ML: doctor",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "hotel_ml",
+      "args": [
+        "doctor"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Hotel ML: initialize regression run",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "hotel_ml",
+      "args": [
+        "init-run",
+        "--config",
+        "configs/regression/v1/ridge-baseline.json"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}
