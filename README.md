@@ -246,6 +246,7 @@ commit SHA. Keep fitted pipelines out of the ZIP, but retain them locally for th
 
 | Guide | What you will find |
 | --- | --- |
+| [Build from scratch](docs/BUILD_FROM_SCRATCH.md) | A complete hands-on guide for building independently in a new repository |
 | [Project brief](docs/CSE382_Project_Description_Milestones.pdf) | Course requirements and grading |
 | [Roadmap](docs/roadmap.md) | Delivery phases and open decisions |
 | [Architecture](docs/architecture.md) | Current implementation boundaries and versioning |
