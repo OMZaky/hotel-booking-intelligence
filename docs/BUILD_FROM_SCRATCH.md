@@ -6,6 +6,9 @@ You will write the project yourself. This guide does not depend on the Python co
 
 **No dataset is downloaded or supplied by this guide.** You will provide H2.csv. Examples using synthetic data teach mechanics; their outputs are not hotel-model results.
 
+For a deeper treatment of cleaning and feature design, see the companion
+[data preparation and feature engineering handbook](DATA_PREPARATION_AND_FEATURE_ENGINEERING.md).
+
 ## How to use this guide
 
 For each chapter:
