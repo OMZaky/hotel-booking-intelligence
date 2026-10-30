@@ -2236,7 +2236,7 @@ A completed worksheet is more valuable than a long cleaning function whose assum
 
 ### Primary references
 
-- [Course project brief](CSE382_Project_Description_Milestones.pdf): original source labels, preparation requirements and leakage assessment. Copy your course brief alongside this handbook if moving it to another repository.
+- [Course project brief](../reference/CSE382_Project_Description_Milestones.pdf): original source labels, preparation requirements and leakage assessment. Preserve the `guides/` and `reference/` layout or repair this link when copying the handbook; see the [documentation index](../README.md).
 - [Hotel booking demand datasets](https://pmc.ncbi.nlm.nih.gov/articles/PMC6297060/): original publication and source-variable construction.
 - [pandas 2.3.3 read_csv](https://pandas.pydata.org/pandas-docs/version/2.3.3/reference/api/pandas.read_csv.html): literal parsing, dtype and missing-marker controls.
 - [pandas 2.3.3 missing data](https://pandas.pydata.org/pandas-docs/version/2.3.3/user_guide/missing_data.html): missing representations and nullable types.

@@ -30,7 +30,7 @@ and an application that loads saved pipelines for new predictions.
 
 > **Current stage: project foundation.** Environment inspection, experiment-config validation,
 > and run-record initialization are implemented. Dataset analysis, training, tuning, evaluation,
-> saved-model inference, and the final interface are planned in the [roadmap](docs/roadmap.md).
+> saved-model inference, and the final interface are planned in the [roadmap](docs/project/roadmap.md).
 > No trained models or performance results are available yet.
 
 ## Quick start
@@ -120,7 +120,7 @@ storage. Files left only inside a Colab VM can disappear when the runtime ends.
 
 **The launcher currently prepares the environment and records experiment metadata; it does
 not train models.** A live end-to-end Colab run remains to be verified.
-See [the Colab guide](docs/colab.md) for persistence and runtime details.
+See [the Colab guide](docs/guides/colab.md) for persistence and runtime details.
 
 ## Experiments
 
@@ -166,7 +166,7 @@ create a new run ID for each execution. See [experiment conventions](configs/REA
 
 - Define the prediction point and task-specific feature availability **before training**.
   The published data contains many snapshots relative to arrival; booking-creation availability
-  cannot be assumed. See the [preliminary leakage audit](docs/leakage-audit.md).
+  cannot be assumed. See the [preliminary leakage audit](docs/reference/leakage-audit.md).
 - Fit imputation, encoding, scaling, feature selection, PCA, and LDA inside training folds.
   Keep the final supervised test set out of model selection.
 - Report baseline and tuned comparisons for every selected algorithm, with search spaces,
@@ -182,7 +182,7 @@ create a new run ID for each execution. See [experiment conventions](configs/REA
 
 Dependencies currently use compatibility bounds rather than a resolved lock.
 A tested dependency lock is still required before reported experiments.
-The complete assessment requirements are in the [project brief](docs/CSE382_Project_Description_Milestones.pdf).
+The complete assessment requirements are in the [project brief](docs/reference/CSE382_Project_Description_Milestones.pdf).
 
 ## Project structure
 
@@ -204,7 +204,7 @@ hotel-booking-intelligence/
 
 Shared VS Code settings live in `.vscode/`; automated GitHub checks live in `.github/`.
 Add new folders only when real code or outputs need them. The
-[future-structure note](docs/future-structure.md) records the deferred layout.
+[future-structure note](docs/project/future-structure.md) records the deferred layout.
 
 ## Development checks
 
@@ -230,7 +230,7 @@ checks on **Windows and Ubuntu with Python 3.12 and 3.14**.
 | **Milestone 2** | December 11, 2026 | Complete comparisons and tuning, PCA/LDA, saved-pipeline application, and final report |
 | **Live discussion** | December 18–24, 2026 | Working demonstration and individual understanding of the complete workflow |
 
-See the [phased roadmap](docs/roadmap.md) for working targets and the midterm buffer.
+See the [phased roadmap](docs/project/roadmap.md) for working targets and the midterm buffer.
 
 This is a **five-member team project**. Each member contributes meaningful commits from their
 own GitHub account and must understand the complete workflow. Record identities and
@@ -244,18 +244,21 @@ commit SHA. Keep fitted pipelines out of the ZIP, but retain them locally for th
 
 ## Documentation
 
+Start with the [documentation index](docs/README.md) for a reading order and the
+difference between the learning guides and this repository's current implementation.
+
 | Guide | What you will find |
 | --- | --- |
-| [Build from scratch](docs/BUILD_FROM_SCRATCH.md) | A complete hands-on guide for building independently in a new repository |
-| [Data preparation and features](docs/DATA_PREPARATION_AND_FEATURE_ENGINEERING.md) | Detailed cleaning, missingness, encoding, feature design, and leakage-safe pipelines |
-| [Project brief](docs/CSE382_Project_Description_Milestones.pdf) | Course requirements and grading |
-| [Roadmap](docs/roadmap.md) | Delivery phases and open decisions |
-| [Architecture](docs/architecture.md) | Current implementation boundaries and versioning |
-| [ML practices](docs/ml-practices.md) | Evaluation, preprocessing, and reproduction conventions |
-| [Leakage audit](docs/leakage-audit.md) | Feature timing risks and review checklist |
-| [Colab guide](docs/colab.md) | Remote execution and output persistence |
-| [Future structure](docs/future-structure.md) | Folders to introduce when needed |
-| [References](docs/references.md) | Primary technical and dataset sources |
+| [Build from scratch](docs/guides/BUILD_FROM_SCRATCH.md) | A complete hands-on guide for building independently in a new repository |
+| [Data preparation and features](docs/guides/DATA_PREPARATION_AND_FEATURE_ENGINEERING.md) | Detailed cleaning, missingness, encoding, feature design, and leakage-safe pipelines |
+| [Project brief](docs/reference/CSE382_Project_Description_Milestones.pdf) | Course requirements and grading |
+| [Roadmap](docs/project/roadmap.md) | Delivery phases and open decisions |
+| [Architecture](docs/project/architecture.md) | Current implementation boundaries and versioning |
+| [ML practices](docs/reference/ml-practices.md) | Evaluation, preprocessing, and reproduction conventions |
+| [Leakage audit](docs/reference/leakage-audit.md) | Feature timing risks and review checklist |
+| [Colab guide](docs/guides/colab.md) | Remote execution and output persistence |
+| [Future structure](docs/project/future-structure.md) | Folders to introduce when needed |
+| [References](docs/reference/references.md) | Primary technical and dataset sources |
 
 Dataset reference: António, Almeida, and Nunes, *Hotel booking demand datasets*,
 Data in Brief, Volume 22 (2019), pp. 41–49.

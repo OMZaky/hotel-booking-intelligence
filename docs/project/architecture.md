@@ -4,7 +4,7 @@ Status: bootstrap defaults selected by the assistant from the project brief; sci
 
 ## Purpose and constraints
 
-Hotel Booking Intelligence is a Python application for City Hotel (H2) ADR regression, cancellation classification, and unsupervised booking segmentation. The source of course requirements is `docs/CSE382_Project_Description_Milestones.pdf`. Use H2 only; the expected original dataset has 79,330 rows and 31 variables. The user will supply the dataset. No dataset is downloaded by setup.
+Hotel Booking Intelligence is a Python application for City Hotel (H2) ADR regression, cancellation classification, and unsupervised booking segmentation. The source of course requirements is `docs/reference/CSE382_Project_Description_Milestones.pdf`. Use H2 only; the expected original dataset has 79,330 rows and 31 variables. The user will supply the dataset. No dataset is downloaded by setup.
 
 The final solution must run outside notebooks, compare at least three models per task before and after tuning, include PCA/LDA comparisons, and load saved pipelines for inference. Milestone 1 is 2026-11-05; Milestone 2 is 2026-12-11; discussion is 2026-12-18 through 2026-12-24.
 
@@ -37,7 +37,7 @@ Run initialization captures the resolved configuration, code SHA and dirty state
 
 ## Environment
 
-Python 3.12 is the preferred local baseline. The package permits 3.12–3.14 to accommodate managed Colab runtimes and the existing local Python 3.14 installation. CI targets 3.12 and 3.14. Core setup commands use the standard library; ML and development dependencies are optional extras. Dependencies initially have compatibility bounds, not a resolved lock: network restrictions prevent generating and validating a lock in this session. Resolve and commit a tested environment lock before producing reported experiments. Always record the actual environment per run.
+Python 3.12 is the preferred local baseline. The package permits 3.12–3.14 to accommodate managed Colab runtimes and the existing local Python 3.14 installation. CI targets 3.12 and 3.14. Core setup commands use the standard library; ML and development dependencies are optional extras. Dependencies have compatibility bounds; a tested resolved lock is still pending. Resolve and commit a tested environment lock before producing reported experiments. Always record the actual environment per run.
 
 Use scikit-learn/pandas/NumPy first; deep learning and GPUs are not prerequisites for this tabular assignment. Start with local JSON records; MLflow is an optional later tracking interface if comparison volume warrants it. Do not add paid services or external credentials just for setup.
 

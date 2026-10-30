@@ -1,6 +1,8 @@
 # Delivery phases
 
 Working dates are proposals; bold dates are from the supplied course PDF.
+The intermediate dates below are the original planning targets, not a progress record.
+When building in a new repository, adjust working dates to actual progress while preserving course deadlines.
 Create new folders only as their phase needs them; [future structure](future-structure.md) records the deferred layout.
 
 | Phase | Proposed dates | Deliverable / exit condition |

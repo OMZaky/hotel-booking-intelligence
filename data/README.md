@@ -5,7 +5,7 @@ Expected original source: City Hotel only, 79,330 rows, 31 columns. Verify this 
 
 - `raw/`: immutable original files, ignored by Git.
 
-Add derived-data folders only when needed; see [future structure](../docs/future-structure.md).
+Add derived-data folders only when needed; see [future structure](../docs/project/future-structure.md).
 
 Do not combine H1 and H2. A combined snake_case mirror is not a drop-in replacement:
 isolate City Hotel and document an explicit one-to-one column mapping before using it.

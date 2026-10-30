@@ -2,7 +2,7 @@
 
 A hands-on, self-contained guide for a new repository. Prepared against the CSE382 project brief on **28 October 2026**.
 
-You will write the project yourself. This guide does not depend on the Python code, configuration loader, or Colab notebook in the repository where you found it. You may copy this guide into your new repository's `docs/` folder. Get the project brief from your course and keep your own copy beside it.
+You will write the project yourself. This guide does not depend on the Python code, configuration loader, or Colab notebook in the repository where you found it. You may copy the documentation into your new repository. Keep `guides/` and `reference/` together to preserve links; see the [documentation index](../README.md). Keep your supplied [course brief](../reference/CSE382_Project_Description_Milestones.pdf) as the requirements authority.
 
 **No dataset is downloaded or supplied by this guide.** You will provide H2.csv. Examples using synthetic data teach mechanics; their outputs are not hotel-model results.
 

@@ -15,4 +15,4 @@ The bootstrap creates metadata only and reports status `initialized`.
 Use `HOTEL_ML_ARTIFACT_ROOT` or `--output-root` to write directly to persistent storage in Colab.
 Keep fitted artifacts locally for the live demonstration; exclude them from the submitted ZIP.
 When reviewed results exist, create the relevant `reports/` folders and publish selected tables
-and figures there. See [future structure](../docs/future-structure.md).
+and figures there. See [future structure](../docs/project/future-structure.md).
